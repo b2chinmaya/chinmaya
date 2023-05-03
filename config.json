@@ -1,0 +1,54 @@
+{
+    "adls": {
+        "blob_storage_account_name" : "mlwstudiodevadls",
+        "blob_storage_account_key" : "SNoSkbSpzN8y4cU6uvkB/IA37fISPqXaku0uGVhOFBtNjaQgykn3Pxm5EvFCYHZjYfI6lBcW+h6I+ASt0KFESA==",
+        "container_name": "mlworks-lite"
+    },
+    "databricks": {
+        "token": "dapi30dbb4d4d961c175b7f9f64a3e3649e8",
+        "instance": "adb-7221573959071043.3.azuredatabricks.net"
+    },
+    "argo": {
+        "host": "https://20.245.31.15:2746",
+        "token": "2203448bfddef9cb6ef4a9d4cd117699968d4e6f4d4f8a155643616941fa71c60e76657eef6df98d3eb68c780b84433af1b51dc73f8292ca4bac6e45fcafdf80",
+        "drift": ["python", "main.py"],
+        "accuracy": ["python", "main.py"],
+        "xai": ["python", "main.py"],
+        "dqm": ["python", "main.py"],
+        "fifd": ["python", "main.py"]
+    },
+    "docker-images": {
+        "username": "mlwstudiodevacr",
+        "password": "eTJ/ZJEvZjAOJkisQ10=PYulzImeFA9k",
+        "drift": "mlwstudiodevacr.azurecr.io/drift:latest",
+        "accuracy": "mlwstudiodevacr.azurecr.io/accuracy:latest",
+        "xai": "mlwstudiodevacr.azurecr.io/xai:latest",
+        "dqm": "mlwstudiodevacr.azurecr.io/dqm:latest",
+        "fifd": "mlwstudiodevacr.azurecr.io/fifd:latest"
+    },
+    "nosql": {
+        "connection": "mongodb://mlw-studio-dev-mongodb:9bDF01xNqmO9Gt5ilPGeHMWvNoenK5WaENLS0A4nud5CdxdNY00MipplIGfWjDAuV1xSAxmIIbjc0yPlNkA4hA==@mlw-studio-dev-mongodb.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@mlw-studio-dev-mongodb@",
+        "database": "mlw-dev-db",
+        "projects": "projects",
+        "models": "models",
+        "cockpit": "cockpit",
+        "KustomCollection": "kustomMetrics",
+        "dqmOnboarding": "dqmOnboarding"
+    },
+    "azure_creds": {
+        "AZURE_SUBSCRIPTION_ID": "#{subscription-id}",
+        "AZURE_CLIENT_ID": "#{client-id}",
+        "AZURE_CLIENT_SECRET": "#{client-secret}",
+        "AZURE_TENANT_ID": "#{tenant-id}",
+        "resource_group_name": "#{resource-group-name}",
+        "factory_name": "#{factory-name}"
+    },
+    "resources":{
+        "requests": {
+            "accuracy": {"memory": "100Mi", "cpu": "150m"},
+            "dqm": {"memory": "100Mi", "cpu": "100m"},
+            "drift": {"memory": "150Mi", "cpu": "100m"},
+            "xai": {"memory": "600Mi", "cpu": "1000m"}
+        }
+    }
+}
